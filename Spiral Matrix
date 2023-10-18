@@ -1,0 +1,29 @@
+class Scratch {
+    public static void spiral (int matrix[][]){
+        int sr = 0 ;
+        int sc=0 ;
+        int er = matrix.length -1 ;
+        int ec = matrix[0].length-1;
+        while (sr <= er && sc<=ec){
+            //top
+            for (int j = sc; j<=ec ;j++){System.out.println(matrix [sr][j]+"");}
+            //right
+            for (int i = sr+1;i<=er;i++){System.out.println(matrix[i][ec]+"");}
+            //bottom
+            for (int j =ec-1;j>=sc;j--){ if (sr==er){break;}
+                System.out.println(matrix[j][ec]+"");}
+            //left
+            for (int i =er-1;i>=sr-1;i--){ if (sc==ec){break;}
+                System.out.println(matrix[i][sc]);}
+            sr++;
+            sc++;
+            er--;
+            ec--;
+            System.out.println();}}
+    public static void main(String[] args) {
+            int matrix [][] = {{1,2,34,5},{23,45,67,18},{12,67,90,8},{6,7,0,10}};
+           // System.out.println(spiral(matrix));
+         spiral(matrix);
+        }
+        
+    }
